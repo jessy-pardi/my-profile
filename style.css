@@ -1,0 +1,178 @@
+/* Colors and fonts */
+
+body {
+  background: #e5d5e9 /*#c39dcd*/;
+  color:  #363062;
+  font-family:'Raleway', sans-serif;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+h1,h2,h3{
+  font-family:'Plus Jakarta Sans', sans-serif;
+}
+
+h1 {
+  font-size:32px ;
+  color:#431e4e ;
+  font-weight: 1000  ;
+  }
+
+h2 {
+  font-size: 20px ;
+  color: #652c74;
+  font-weight: 900;
+}
+
+/* The animation code */
+@keyframes travel-animation {
+  0%  {padding-left: 0%;}
+  75% {padding-left: 60%;}
+  100% {padding-left: 0%;}
+}
+@keyframes art-animation {
+  0% {font-size: 20px ; color: #652c74;}
+  10%  {font-size: 20px ; color: yellow;}
+  50% {font-size: 20px ; color: #E02665;}
+  100% {font-size: 20px ; color: #652c74;}
+}
+@keyframes guitar-animation {
+  0%  {color:white; padding-left:0; padding-right:0}
+  50% {color:#E02665; padding-left:40px; padding-right:40px}
+  100% {color:white; padding-left:40px; padding-right:40px}
+}
+@keyframes music-animation {
+  0%  {color:#652c74;}
+  50% {color:#E02665;}
+  100% {color:#652c74;}
+}
+
+.card-white:hover h2.travel{
+  animation-name: travel-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction : alternate;
+}
+.card-white:hover h2.art{
+  animation-name: art-animation;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-direction : alternate;
+}
+.card-white h2.music .fa-guitar{
+  color:white;
+}
+.card-white:hover h2.music .fa-guitar{
+  animation-name: guitar-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction : alternate;
+}
+.card-white:hover h2.music .fa-music{
+  animation-name: music-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction : alternate;
+}
+
+a {
+  font-family:'Plus Jakarta Sans', sans-serif;
+  text-decoration: none;
+  font-weight:600;
+  font-size: 16px;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/*Custom design with class*/
+
+.container {
+  width:800px;
+  margin: 40px auto;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 450px;
+  }
+}
+
+.card-white {
+  background-color: white;
+  padding: 40px;
+  box-shadow:0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-block: 30px;
+  text-align: center;
+  transition: box-shadow 0.6s ease;
+}
+.card-white:hover {
+  box-shadow:0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-footer {  
+  padding: 15px;
+  display:flex;
+  justify-content:center;
+}
+
+.img-circle {
+  border-radius: 50%;
+  box-shadow:0px 0px 30px rgba(0, 0, 0, 0.1);
+  width:170px;
+  aspect-ratio: 1; /* rapport larger/hauteur. 1 pour un carré.*/
+  transition: box-shadow 0.6s ease;
+}
+.img-circle:hover {
+  box-shadow:0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-blue {
+  background-color: purple;
+  color: #F1ECFA;
+  padding: 15px 20px;
+  border-radius: 4px;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.btn-blue:hover {
+  background-color: black;
+  color: white;
+}
+
+.list-inline {  
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-inline li {
+ display: inline;
+ padding: 10px;
+}
+
+.list-inline li i.fa-brands {
+  size: 25px;
+  font-size: x-large;
+  color: #652c74;
+  transition: color 0.6s ease;
+}
+
+.list-inline li i.fa-brands:hover {
+  font-size: x-large;  
+  color: black;
+}
+
+/* Design adjustments */
+
+#introduction p {
+  margin-bottom: 35px;
+}
